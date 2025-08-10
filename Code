@@ -1,0 +1,44 @@
+
+int leds[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+int t = 0; // time delay
+int potval;
+int potpin=A0;
+
+void setup() {
+  Serial.begin(9600);
+  for (int i = 0; i < 10; i++) {
+    pinMode(leds[i], OUTPUT);
+  }
+  pinMode(potpin, INPUT);
+}
+
+void loop() {
+  
+  
+  //  LEDs Light from 1 to 9
+  potval=analogRead(potpin);
+  
+  Serial.print("Potential value ");  
+  Serial.println(potval);
+  t=(122.3-(potval*.1));
+  
+  
+  for (int j = 0; j <=10; j++) {
+      digitalWrite(leds[j], HIGH);
+      delay(t);
+  }
+
+
+for (int j = 10; j >=0; j--) {
+      digitalWrite(leds[j], LOW);
+      delay(t);
+  }
+}
+  
+
+
+
+
+
+
+
