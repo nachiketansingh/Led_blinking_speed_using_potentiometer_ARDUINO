@@ -1,4 +1,4 @@
-# nachiketansingh-Led_blinking_speed_using_potentiometer_ARDUINO
+# Led_blinking_speed_using_potentiometer_ARDUINO
 
 
   I made a small LED 💡 project in which there are 10 LED whose blinking speed varies using potentiometer(with the help of ARDUINO uno)
